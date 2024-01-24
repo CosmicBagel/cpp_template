@@ -28,6 +28,7 @@ endif()
 # CONFIGURE_DEPENDS flag makes it so that we don't have to run cmake when a new cpp file is added
 file(GLOB template_project_SRC CONFIGURE_DEPENDS "src/*.cpp")
 target_sources(template_project PRIVATE ${template_project_SRC})
+target_include_directories(template_project PRIVATE src)
 
 # symlink the compile_commands.json so tools can easily see it
 execute_process(
